@@ -5,16 +5,19 @@ import M from 'materialize-css/dist/js/materialize.min.js'
 
 
 function DatePicker() {
-    document.addEventListener('DOMContentLoaded', function() {     
+    let datepickerRef = null;
 
-        var elems = document.querySelectorAll('.datepicker');        
+    document.addEventListener('DOMContentLoaded', function() {  
+     
+        var elems = datepickerRef;        
         const options = { format: 'dd/mm/yyyy', };
-        var instances = M.Datepicker.init(elems, options);
+        M.Datepicker.init(elems, options);
       
       });
     return (
       <div className="DP" style={{width:100}}>
-   <input type="text" className="datepicker"></input>
+   <input type="text" className="datepicker" ref={(holder) => datepickerRef = holder} ></input>
+
       </div>
     );
   }
