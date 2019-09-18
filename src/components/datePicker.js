@@ -14,7 +14,7 @@ function DatePicker() {
       });
     return (
       <div className="DP" style={{width:100}}>
-   <input type="text" className="datepicker">{}</input>
+   <input type="text" className="datepicker"></input>
       </div>
     );
   }
